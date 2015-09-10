@@ -14,7 +14,6 @@ include_once('header.php'); // header info (CSS, etc) is consistent. This will m
 <h1> Chapin Hall Points Submission Form </h1>
 
 <?php
-$time = (time()); // might as well generate the time accurately, so this executes early
 // collect all the variables submitted. This requires some work.
 $name    = $_SESSION['name'];		// from P1
 $netid   = $_SESSION['netid'];		// from P1
