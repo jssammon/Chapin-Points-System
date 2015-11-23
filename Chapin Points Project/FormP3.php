@@ -42,6 +42,9 @@ else {
 
 // points assumed unrestricted unless otherwise proven guilty. This is 'MURICA!
 $restricted = FALSE;
+
+
+// switch between event cases to determine points to award. Let's expand this further by making this configurable.
 switch($event) {
 	// Academic Events
 	case 'ac1':
