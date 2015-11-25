@@ -13,31 +13,31 @@ include_once('header.php'); // header info (CSS, etc) is consistent. This will m
 <div id="container">
 <h1> Chapin Hall Points Submission Form </h1>
 <br />
-<a href="http://chapinpointssubmission.webuda.com/FormP1.php"> Go Back</a><br /><br />
+<a href="/FormP1.php"> Go Back</a><br /><br />
 <?php
 	// get the 3 variables requested
 	$name    = sanitize_input($_POST['name']);
 	$netid   = strtolower(sanitize_input($_POST['netid']));
 	$category= sanitize_input($_POST['category']);
-	
+
 	// Save them to the session, which persists between pages. $_POST isn't that reliable... I think.
 	$_SESSION['name']=$name;
 	$_SESSION['netid']=$netid;
 	$_SESSION['category']=$category;
-	
+
 	// Write out the data recieved, roughly where it was on the previous page. Mostly for effect, also helps accuracy.
 	echo "Name: $name <br /><br /> NetID: $netid <br /><br /> Category: $category <br /><br />";
-	
+
 	// Now for the fun part: A big-ass switch statement, controlling what form boxes appear
 	// note the weaving in and out of PHP. This doesn't feel like it should be legal, let alone syntactically accurate
-	
+
 	// The cryptic "ac1 ... cu4 ... ph2 notation is standardized shorthand to reduce errors: the first two letters of the points
 	// category plus a unique event ID number, which is the same as its position (within the category) on the official list here:http://chapinhall.weebly.com/points-policy.html
 	// the system can be easily adapted to any points policy list
 	?>
 	<form action="FormP3.php" method="post">
 	<?php
-	
+
 	switch($category) {
 			case 'Academic':
 				?>
@@ -156,7 +156,7 @@ include_once('header.php'); // header info (CSS, etc) is consistent. This will m
 			default:
 				echo "Oops, something went wrong. Please contact your VP."; // Let's hope this doesn't happen
 	}
-		
+
 	?>
 	<!-- Common form elements:  -->
 	<!-- Date -->
@@ -164,17 +164,14 @@ include_once('header.php'); // header info (CSS, etc) is consistent. This will m
 	<!-- Check the <header> of header.php for more info-->
 	Date: <input type="text" name="date" id="datepicker" required />
 	<span class="error">*</span>	<br /> <br />
-	
+
 	<!-- Submit button-->
 	<input type="submit" name='submit' value="Submit">
 	</form> <br />
-	
+
 </div>
 
 
 <?php
 include('footer.php'); // footer info remains constant
 ?>
-
-</body>
-</html>

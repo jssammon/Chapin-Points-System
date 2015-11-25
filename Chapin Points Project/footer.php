@@ -10,3 +10,5 @@ Adapted and updated by Leo Ji
 <!-- I took the above of the footer, but leave it here as some token credit to the host-->
 
 </div>
+</body>
+</html>

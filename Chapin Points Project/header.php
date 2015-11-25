@@ -55,8 +55,6 @@ $(function() {
 });
 </script>
 <!-- end cited section-->
-
-</head>
 <?php
 	// Also a function: This will prevent most low-effort hacking. Not that I anticipate anyone trying,
 	// But on the off-chance anyone reads XKCD and wants to try the "Bobby Tables" attack, this will stop it.
@@ -99,3 +97,4 @@ $(function() {
 	$password = "chapin726";
 	$dbname = "a7686212_Points";
 ?>
+</head>
