@@ -14,37 +14,40 @@ Collects name, netid, and category
 <a href="/default.php"> Return to Point homepage</a><br />
 </p>
 
-<form action="FormP2.php" method="post"> <!-- This is the main form block (Part 1) -->
+<form action="FormP2.php" method="post" class="form1"> <!-- This is the main form block (Part 1) -->
 
 <!-- Input Name-->
-Name:  <input type="text" name="name" size="40" required value="<?php if (!empty($_SESSION['name'])){ print $_SESSION['name'];}?>">
-	   <span class="error">*</span>
-	   <br /> <br />
+Name: <input type="text" name="name" size="40" required value="<?php if (!empty($_SESSION['name'])){ print $_SESSION['name'];}?>">
+	  <span class="error">*</span>
+	  <br /> <br />
 
 <!-- Input NetID-->
 NetID: <input type="text" name="netid" size="6" required maxlength="6" value="<?php if (!empty($_SESSION['netid'])){ print $_SESSION['netid'];}?>">
-	   <span class="error">*</span>
-	   <br /> <br />
+	  <span class="error">*</span>
+	  <br /> <br />
 <!-- Note: The value="?php... sections above just supply a default value if you're returning to this page during the same session.-->
 
-
+<div class="form1-points-category">
 <!-- Input Points Category (If you're adding new categories of points or reshuffling
 Exec roles, you may have to edit this accordingly) -->
-Points Category :
-<select name="category">
+<p class="points-category-label">Points Category:</p>
 
-<option value="Academic">Academic</option>
-<option value="Communications">Communications</option>
-<option value="Fellows">Fellows</option>
-<option value="Cultural">Cultural</option>
-<option value="History">History/Archive</option>
-<option value="Sports">IM Sports</option>
-<option value="Northwestern">Northwestern</option>
-<option value="Philanthropy">Philanthropy</option>
-<option value="Social">Social</option>
-<option value="Other">Other</option>
+<div class="form1-category">
 
-</select> <br /> <br />
+<label><input type="radio" name="category" value="Academic" />Academic</label>
+<label><input type="radio" name="category" value="Communications" />Communications</label>
+<label><input type="radio" name="category" value="Fellows" />Fellows</label>
+<label><input type="radio" name="category" value="Cultural" />Cultural</label>
+<label><input type="radio" name="category" value="History" />History/Archive</label>
+<label><input type="radio" name="category" value="Sports" />IM Sports</label>
+<label><input type="radio" name="category" value="Northwestern" />Northwestern</label>
+<label><input type="radio" name="category" value="Philanthropy">Philanthropy</label>
+<label><input type="radio" name="category" value="Social" />Social</label>
+<label><input type="radio" name="category" value="Other" />Other</label>
+
+</div>
+
+</div>
 
 <input type="submit" name='submit' value="Continue">
 </form>

@@ -3,7 +3,7 @@
 /* These elements below were default in the original stylesheet, and are used
 throughout the Chapin Points site */
 
-body { 
+body {
 	background-color: #E6E6E6;
 }
 
@@ -19,15 +19,36 @@ h1 {
 form {
 	margin: 0;
 	padding: 0;
-} 
+}
+
+form.form1{
+	position: relative;
+}
+
+form.form1 label{
+	display: block;
+}
+
+.form1-category{
+	width: 80%;
+	float: right;
+	margin-left: 20%;
+	line-height: 2em;
+}
+
+
+
+button {text-align: center;
+margin: 0 auto;}
+
 
 #container {
-	width: 600px;
+	width: 800px;
 	margin-left:auto;
 	margin-right:auto;
 	border: 1px solid #CCCCCC;
 	padding: 9px;
-	background-color:#FFFFFF;	
+	background-color:#FFFFFF;
 }
 
 #copy {
@@ -55,7 +76,7 @@ form {
 	float: right;
     padding-right: 50px;
  }
- 
+
 .wide {
 	width: 1200px;
 	margin-left:auto;
@@ -89,7 +110,7 @@ th {
 
 
 /* Everything under here is rarely, if ever used in this site;
-   It was copied over from the default stylesheet */  
+   It was copied over from the default stylesheet */
 
 #breadcrumbs {
 	color: #6699FF;
@@ -135,7 +156,7 @@ th {
 #headerfile {
 	text-align:left;
 	float: left;
-	width: 320px; 
+	width: 320px;
 }
 
 #headersize {
@@ -157,7 +178,7 @@ th {
 	text-decoration:none;
 	width:568px;
 	text-align:right;
-	
+
 }
 
 #listing a:hover {
@@ -196,7 +217,7 @@ th {
 #listing a span img {
 	width: 150px;
 	background-color:#CCCCCC;
-	visibility: hidden;	
+	visibility: hidden;
 }
 
 #listing a:hover span img {
@@ -220,7 +241,7 @@ th {
 	background-color: #DBE6FE;
 	padding: 2px 5px 2px 5px;
 	border-bottom: 1px solid #A7C5FF;
-	
+
 }
 
 #uploadcontent {
@@ -229,7 +250,7 @@ th {
 
 .b {
 	background-color: #E9F0FF;
-	
+
 }
 
 .w {
