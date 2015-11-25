@@ -12,15 +12,15 @@ include_once('header.php'); // header info (CSS, etc) is consistent. This will m
 <div id="container">
 <img src="Chapin_Crest.png"/>
 <h1> Chapin Hall Points System </h1>
-<p> 
+<p>
 
 The complete points policy may be found <a href="http://chapinhall.weebly.com/points-policy.html"> here</a><br />
 <a href="http://chapinhall.weebly.com/"> Return to Chapin Hall site</a><br />
 
-<form action="http://chapinpointssubmission.webuda.com/FormP1.php">
+<form action="/FormP1.php">
     <input type="submit" value="Submit a Record">
 </form><br />
-<form action="http://chapinpointssubmission.webuda.com/CheckPoints.php">
+<form action="/CheckPoints.php">
     <input type="submit" value="View Your Points">
 </form>
 </p>

@@ -10,6 +10,7 @@ Requires mySQL access
 session_start(); // index max and min are stored here
 session_unset(); // don't want any holdover data hanging around from previous pages.
 include_once('../header.php'); // header info (CSS, etc) is consistent. This will make updating style easier. I think.
+
 // NOTE: because we're down a directory, we use '../header.php' instead of '/header.php' - If we went down another directory,
 // it would become ../../header.php. Just something to note if you're creating a new folder somewhere
 ?>
@@ -30,27 +31,27 @@ $result = mysql_query($sql) or die ("error in query \"$sql\"");
 if (mysql_num_rows($result)>0) {
 	//query is not empty, so create a table
 	echo "<table>";
-	
+
 	// give the table some nice headers
 	echo "<tr> <th> Timestamp </th> <th> Name </th> <th> NetID </th>
 		<th> Category </th> <th> Event </th> <th> Date </th> <th> Info </th> <th> Points </th>
 		<th> Restricted? </th> <th> Accept/Reject </th> </tr>";
-	
+
 	// start a form. Once again, php and html are being mixed together in a terrible abomination that is somehow valid code
 	echo "<form action=\"AdminApproval2.php\" method=\"post\">";
-	
+
 	// a few variables we'll need - the maximum and minimum index, which will be used on the next page
 	// they'll be reassigned in the course of our loop
 	$minindex=PHP_INT_MAX;
 	$maxindex=0;
-	
+
 	// whenever you see two nested loops, there's a good chance the program is doing somethign with a table
 	// This is no exception - The while loop generates rows (an uncertain amount), the for loop generates columns (a known number)
-	
+
 	while($row = mysql_fetch_row($result)){
 		echo "<tr>";
 		$index = $row[0];
-		
+
 		// This is a fairly straightforward assignment of maximum and minimum indices
 		// Note that both of these statements will run on the first pass, by the definitions
 		// of our min and max indices above
@@ -60,7 +61,7 @@ if (mysql_num_rows($result)>0) {
 		if ($index > $maxindex) {
 			$maxindex = $index;
 		}
-		
+
 		// Generate/populate our columns with data. A few special cases to format the dates and bools
 		// The index number $i here is the column number. Note that there are a few $i-1 conversions
 		// because the first column is denoted "1" but indexed in $row as 0 (and so forth).
@@ -84,12 +85,12 @@ if (mysql_num_rows($result)>0) {
 		echo "<td>";
 		// If you don't like the possibility of accidentally approving a ton of records,
 		// you should remove [checked=\"checked\"] from the next line
-		echo "<input type=\"radio\" name=\"$index\" value=\"Approved\" checked=\"checked\"> Accept &nbsp;&nbsp;&nbsp;"; 
+		echo "<input type=\"radio\" name=\"$index\" value=\"Approved\" checked=\"checked\"> Accept &nbsp;&nbsp;&nbsp;";
 		echo "<input type=\"radio\" name=\"$index\" value=\"Rejected\"> Reject &nbsp;&nbsp;&nbsp;";
 		echo "</td>";
 		echo "</tr>";
 	} // end of the data fetching
-	
+
 	// end the madness. Specifically, this ends the table and the form, with the ubiquitous "submit" button
 	echo "</table>";
 	echo "<br />";
@@ -98,12 +99,12 @@ if (mysql_num_rows($result)>0) {
 
 	echo "<input type=\"submit\" name=\"submit\" value=\"Approve Records\">";
 	echo "</form>";
-	
+
 	// PROGRAMMER's NOTE: All this echoing is terrible form. I should probably be breaking the php and
 	// inserting ordinary html (still within the conditional of the php) - this is how most other pages
-	// on this site were done. But this was easier for me to wrap my brain around for this part. I'm sorry, 
+	// on this site were done. But this was easier for me to wrap my brain around for this part. I'm sorry,
 	// I hope it isn't too hard to follow.
-	
+
 	// save variables. Approval/Rejection is sent to the next page via POST, but our min and max indices
 	// have to be sent seperately via SESSION
 	$_SESSION['minindex']=$minindex;

@@ -1,23 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <!-- This header file replaces the opening <html> tag plus the <head></head> section -->
 <!--
 Adds some basic heading information. Provides several necessary functions used elsewhere for connection and input handling
 
 requires mySQL access
 -->
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<html>
 <head>
-<meta name="robots" content="noindex" charset="utf-8" http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-
-
 <title>Chapin Points Submission Site</title>
 
 <!-- CSS stylesheet, default for now-->
 <!-- <link rel="stylesheet" type="text/css" href="http://www.000webhost.com/images/index/styles.css" /> -->
-<link rel="stylesheet" type="text/css" href="http://chapinpointssubmission.webuda.com/styles.css" />
+<link rel="stylesheet" type="text/css" href="/styles.css" />
 <!-- Additional style (error in form) - may be incorporated in CSS later-->
-
 
 
 <!-- A section courtesy of https://jqueryui.com/datepicker/ . This runs our "datepicker" input field -->
@@ -67,7 +62,7 @@ $(function() {
 	// But on the off-chance anyone reads XKCD and wants to try the "Bobby Tables" attack, this will stop it.
 	// Too obscure a reference for the Humanities Res College?
 	// Anyways, call this on any raw inputted data before doing anything with it. It's like a condom for your webform.
-	
+
 	function connect_to_mySQL() {
 		$server = "mysql14.000webhost.com";
 		$username = "a7686212_admin";
@@ -86,7 +81,7 @@ $(function() {
 		}
 		return $connection;
 	}
-	
+
 	function sanitize_input($data) {
 	$connection = connect_to_mySQL();
 	$data = trim($data);
@@ -96,12 +91,11 @@ $(function() {
 	mysql_close($connection);
 	return $data;
 	}
-	
-	
+
+
 	// And here, our standard connection variables
 	$server = "mysql14.000webhost.com";
 	$username = "a7686212_admin";
 	$password = "chapin726";
 	$dbname = "a7686212_Points";
 ?>
-
