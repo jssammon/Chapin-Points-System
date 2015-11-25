@@ -17,12 +17,12 @@ Collects name, netid, and category
 <form action="FormP2.php" method="post"> <!-- This is the main form block (Part 1) -->
 
 <!-- Input Name-->
-Name:  <input type="text" name="name" size="40" required value="<?php if (!empty($_SESSION['name'])){ echo $_SESSION['name'];}?>">
+Name:  <input type="text" name="name" size="40" required value="<?php if (!empty($_SESSION['name'])){ print $_SESSION['name'];}?>">
 	   <span class="error">*</span>
 	   <br /> <br />
 
 <!-- Input NetID-->
-NetID: <input type =text" name="netid" size="6" required value="<?php if (!empty($_SESSION['netid'])){ echo $_SESSION['netid'];}?>">
+NetID: <input type="text" name="netid" size="6" required maxlength="6" value="<?php if (!empty($_SESSION['netid'])){ print $_SESSION['netid'];}?>">
 	   <span class="error">*</span>
 	   <br /> <br />
 <!-- Note: The value="?php... sections above just supply a default value if you're returning to this page during the same session.-->
