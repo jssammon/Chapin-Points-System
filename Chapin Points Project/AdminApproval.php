@@ -44,7 +44,7 @@ if (mysql_num_rows($result)>0) {
 	$minindex=PHP_INT_MAX;
 	$maxindex=0;
 	
-	// whenever you see two nested loops, there's a good chance the program is doing somethign with a table
+	// whenever you see two nested loops, there's a good chance the program is doing something with a table
 	// This is no exception - The while loop generates rows (an uncertain amount), the for loop generates columns (a known number)
 	
 	while($row = mysql_fetch_row($result)){

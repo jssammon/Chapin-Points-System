@@ -240,7 +240,7 @@ echo
 ?>
 
 <!-- A nice little button to take you back to the start-->
-<form action="http://chapinpointssubmission.webuda.com/FormP1.php">
+<form action="http://chapin-points.net16.net/FormP1.php">
     <input type="submit" value="Submit another record">
 </form>
 

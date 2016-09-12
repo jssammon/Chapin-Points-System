@@ -17,10 +17,10 @@ include_once('header.php'); // header info (CSS, etc) is consistent. This will m
 The complete points policy may be found <a href="http://chapinhall.weebly.com/points-policy.html"> here</a><br />
 <a href="http://chapinhall.weebly.com/"> Return to Chapin Hall site</a><br />
 
-<form action="http://chapinpointssubmission.webuda.com/FormP1.php">
+<form action="http://chapin-points.net16.net/FormP1.php">
     <input type="submit" value="Submit a Record">
 </form><br />
-<form action="http://chapinpointssubmission.webuda.com/CheckPoints.php">
+<form action="http://chapin-points.net16.net/CheckPoints.php">
     <input type="submit" value="View Your Points">
 </form>
 </p>
