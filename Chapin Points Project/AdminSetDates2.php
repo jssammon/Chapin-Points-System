@@ -40,7 +40,7 @@ mysql_close($connection);
 
 
 ?>
-<a href="http://chapinpointssubmission.webuda.com/admin/AdminPage1.php"> Return to Admin Home Page </a>
+<a href="http://chapin-points.net16.net/admin/AdminPage1.php"> Return to Admin Home Page </a>
 
 </div>
 <?php
