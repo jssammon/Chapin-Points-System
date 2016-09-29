@@ -91,7 +91,7 @@ switch($event) {
 		$restricted = TRUE;
 		break;
 	case 'cu3':
-		$points = 5;
+		$points = 10;
 		$event = 'Planning off-campus event';
 		break;
 	case 'cu4':
@@ -105,17 +105,17 @@ switch($event) {
 		$event = 'Taking photos of Chapin event';
 		break;
 	case 'hi2':
-		$points = 4;
+		$points = 10;
 		$event = 'Producing Chapin video';
 		break;
 		
 	// IM Sports
 	case 'sp1':
-		$points = 2;
+		$points = 4;
 		$event = 'Participating in a game';
 		break;
 	case 'sp2':
-		$points = 1;
+		$points = 2;
 		$event = 'Spectating a game';
 		break;
 		
@@ -149,17 +149,17 @@ switch($event) {
 		$event = 'DM participation or fundraising';
 		break;
 	case 'ph4':
-		$points = 5;
+		$points = 10;
 		$event = 'Dancing on Chapin DM team';
 		break;
 	case 'ph5':
-		$points = 1;
+		$points = 2;
 		$event = 'DM event';
 		break;
 	
 	// social events
 	case 'so1':
-		$points = 2;
+		$points = 3;
 		$event = 'Hosting munchies';
 		break;
 	case 'so2':
@@ -167,7 +167,7 @@ switch($event) {
 		$event = 'Hosting non-munchies event';
 		break;
 	case 'so3':
-		$points = 2;
+		$points = 1;
 		$event = 'Baking for happiness of others';
 		break;
 	

@@ -14,7 +14,7 @@ include_once('header.php'); // header info (CSS, etc) is consistent. This will m
 <h1> Chapin Hall Points System </h1>
 <p> 
 
-The complete points policy may be found <a href="http://chapinhall.weebly.com/points-policy.html"> here</a><br />
+The complete points policy may be found <a href="http://chapinhall.weebly.com/points.html"> here</a><br />
 <a href="http://chapinhall.weebly.com/"> Return to Chapin Hall site</a><br />
 
 <form action="http://chapin-points.net16.net/FormP1.php">
