@@ -93,7 +93,7 @@ include_once('GetPoints.php'); // Functions used to collect points information
 			echo "<table>";
 			
 			// give the table some nice headers
-			echo "<tr> <th> Category </th> <th> Event </th> <th> Date </th>
+			echo "<tr> <th> Category </th> <th> Event </th> <th> Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </th>
 			<th> Additional Info </th> <th> Points </th> <th> Restricted? </th> <th> Approval Status </th></tr>";
 			while($row = mysql_fetch_row($result)){
 				echo "<tr>";
