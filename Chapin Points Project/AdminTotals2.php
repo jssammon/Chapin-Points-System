@@ -113,7 +113,7 @@ include_once('../GetPoints.php'); // Functions used to collect points informatio
 		$connection = connect_to_mySQL(); // defined in header.php
 		$sql = "SELECT *
 				FROM Points_Summary
-				ORDER BY NetID DESC;";
+				ORDER BY NetID ASC;";
 		$result = mysql_query($sql) or die ("error in query \"$sql\"");
 		
 		// If there's at least one record...

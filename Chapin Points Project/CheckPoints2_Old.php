@@ -11,7 +11,7 @@ include_once('header.php'); // header info (CSS, etc) is consistent. This will m
 include_once('GetPoints.php'); // Functions used to collect points information
 ?>
 <body>
-<div class="wide">
+<div id="container">
 <h1> Chapin Hall Points - View Points </h1>
 
 <?php
@@ -43,7 +43,7 @@ include_once('GetPoints.php'); // Functions used to collect points information
 		echo "<b>Record for $name ($netid), $currentyear-$nextyear school year </b><br /><br />";
 		
 		$record = GetPointsByPeriod($netid, $date[0], $date[1]);
-		echo "<b>Fall:</b><br /> $record[total] total points, of which $record[restricted] are restricted <br />";
+		echo "<b>Fall</b><br />: $record[total] total points, of which $record[restricted] are restricted <br />";
 		if ($record['pending'] != 0) {
 			echo "($record[pending] points pending) <br />";
 		}
@@ -53,7 +53,7 @@ include_once('GetPoints.php'); // Functions used to collect points information
 		$sum += $record['total'];
 		
 		$record = GetPointsByPeriod($netid, $date[1], $date[2]);
-		echo "<b>Winter:</b><br /> $record[total] total points, of which $record[restricted] are restricted <br />";
+		echo "<b>Winter</b><br />: $record[total] total points, of which $record[restricted] are restricted <br />";
 		if ($record['pending'] != 0) {
 			echo "($record[pending] points pending) <br />";
 		}
@@ -63,7 +63,7 @@ include_once('GetPoints.php'); // Functions used to collect points information
 		$sum += $record['total'];
 		
 		$record = GetPointsByPeriod($netid, $date[2], $date[3]);
-		echo "<b>Spring:</b><br /> $record[total] total points, of which $record[restricted] are restricted <br />";
+		echo "<b>Spring</b><br />: $record[total] total points, of which $record[restricted] are restricted <br />";
 		if ($record['pending'] != 0) {
 			echo "($record[pending] points pending) <br />";
 		}
@@ -72,74 +72,7 @@ include_once('GetPoints.php'); // Functions used to collect points information
 		}
 		$sum += $record['total'];
 		
-		echo "<b>Total points</b>: $sum <br /><br />";
-		
-		// now display all the points records in a table
-		echo "<b>All Points records for $name:</b><br />";
-		
-		// Get the sql query all set. This will need some date restrictions and a netid restriction
-		$connection = connect_to_mySQL(); // defined in header.php
-		$sql="SELECT Category,Event,Date,Additional_Info,Points,Restricted,Approval_Status 
-			  FROM Raw_Submissions 
-			  WHERE NetID='$netid'
-			  AND Date >= '$date[0]'
-			  AND Date < '$date[3]'
-			  ORDER BY Date DESC";
-		// Run the query
-		$result = mysql_query($sql) or die ("error in query \"$sql\"");
-		
-		if (mysql_num_rows($result)>0) {
-			//query is not empty, so create a table
-			echo "<table>";
-			
-			// give the table some nice headers
-			echo "<tr> <th> Category </th> <th> Event </th> <th> Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </th>
-			<th> Additional Info </th> <th> Points </th> <th> Restricted? </th> <th> Approval Status </th></tr>";
-			while($row = mysql_fetch_row($result)){
-				echo "<tr>";
-				
-				for ($i = 1 ; $i <= 7 ; $i++){
-					echo "<td>";
-					
-					// Block of if/elseif/else to format the text
-					if ($i==3) { // if it's a date
-					echo date("n-j-Y", strtotime($row[($i-1)]));
-					}
-					
-					else if ($i == 6) { // if it's a restricted point
-						if ($row[($i-1)]==TRUE) {
-							echo "Restricted";
-						}
-						else {
-							echo "-";
-						}
-					}
-					else if ($i == 7){
-						if (!($row[($i-1)])) {	//ie, if the entry is null
-							echo "Pending";
-						}
-						else{
-							echo $row[($i-1)];
-						}
-					}
-					else {
-						echo $row[($i-1)];
-					}
-					
-					// close out the table entry and cycle back to the start of the for loop
-					echo "</td>";
-				}
-				
-				echo "</tr>";
-			}
-			echo "</table>";
-			echo "<br />";
-			
-			//
-		}
-		else{
-			echo "Something went wrong :( <br />";
-		}
+		echo "<b>Total points</b>: $sum <br />";
 	}
 	else {
 		echo "No record found for $netid <br />";

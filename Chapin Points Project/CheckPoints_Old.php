@@ -11,7 +11,7 @@ include_once('header.php'); // header info (CSS, etc) is consistent. This will m
 <h1> Chapin Hall Points - View Points </h1>
 
 <form action="CheckPoints2.php" method="post">
-NetID: <input type ="text" name="netid" size="8" required value="<?php if (!empty($_SESSION['netid'])){ echo $_SESSION['netid'];}?>">
+NetID: <input type ="text" name="netid" size="6" required value="<?php if (!empty($_SESSION['netid'])){ echo $_SESSION['netid'];}?>">
 	   <br /> <br />
 <input type="submit" name='submit' value="Continue">
 </form>
