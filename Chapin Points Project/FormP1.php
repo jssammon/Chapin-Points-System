@@ -24,7 +24,7 @@ Name:  <input type="text" name="name" size="40" required value="<?php if (!empty
 	   <br /> <br />
 
 <!-- Input NetID-->
-NetID: <input type ="text" name="netid" size="6" required value="<?php if (!empty($_SESSION['netid'])){ echo $_SESSION['netid'];}?>">
+NetID: <input type ="text" name="netid" size="8" required value="<?php if (!empty($_SESSION['netid'])){ echo $_SESSION['netid'];}?>">
 	   <span class="error">*</span>
 	   <br /> <br />
 <!-- Note: The value="?php... sections above just supply a default value if you're returning to this page during the same session.-->
