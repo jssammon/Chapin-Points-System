@@ -118,6 +118,9 @@ include_once('GetPoints.php'); // Functions used to collect points information
 						if (!($row[($i-1)])) {	//ie, if the entry is null
 							echo "Pending";
 						}
+						else{
+							echo $row[($i-1)];
+						}
 					}
 					else {
 						echo $row[($i-1)];
