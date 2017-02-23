@@ -42,10 +42,11 @@ include_once('header.php'); // header info (CSS, etc) is consistent. This will m
 			case 'Academic':
 				?>
 				Event: <select name="event">
-					<option value="ac1">Attending a Fireside</option>
-					<option value="ac2">Snacks for a Fireside</option>
-					<option value="ac3">Arranging a Fireside</option>
-					<option value="ac4">Hosting a Fireside</option>
+					<option value="ac1">Attending a Fellows Fireside</option>
+					<option value="ac2">Attending a Student Fireside</option>
+					<option value="ac3">Snacks for a Fireside</option>
+					<option value="ac4">Arranging a Fireside</option>
+					<option value="ac5">Hosting a Fireside</option>
 				</select> <span class="error">*</span> <br /> <br />
 				Description:<br />
 				<input type="text" name="info"  size="40"> <br /> <br />

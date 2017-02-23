@@ -44,18 +44,22 @@ $restricted = FALSE;
 switch($event) {
 	// Academic Events
 	case 'ac1':
-		$points = 3;
-		$event = 'Attending a fireside';
+		$points = 4;
+		$event = 'Attending a fellows fireside';
 		break;
 	case 'ac2':
+		$points = 3;
+		$event = 'Attending a student fireside';
+		break;
+	case 'ac3':
 		$points = 2;
 		$event = 'Snacks for a fireside';
 		break;
-	case 'ac3':
+	case 'ac4':
 		$points = 5;
 		$event = 'Arranging a a fireside';
 		break;
-	case 'ac4':
+	case 'ac5':
 		$points = 10;
 		$event = 'Hosting a fireside';
 		break;
@@ -68,15 +72,15 @@ switch($event) {
 		
 	// Fellows Events
 	case 'fe1':
-		$points = 2;
+		$points = 4;
 		$event = 'Fellows lunch';
 		break;
 	case 'fe2':
-		$points = 2;
+		$points = 4;
 		$event = 'Dinner at the Master\'s Table';
 		break;
 	case 'fe3':
-		$points = 2;
+		$points = 3;
 		$event = 'Thirs-Tea Thursday';
 		break;
 	
@@ -137,10 +141,16 @@ switch($event) {
 	// Philanthropy
 	case 'ph1':
 		$points = round(2*$points);
+		if ($points>5){
+			$points = 5;
+		}
 		$event = 'Chapin philanthropy';
 		break;
 	case 'ph2':
 		$points = round(2*$points);
+		if ($points>5){
+			$points = 5;
+		}
 		$event = 'Non-Chapin philanthropy';
 		$restricted = TRUE;
 		break;
