@@ -14,7 +14,7 @@ include_once('../GetPoints.php'); // Functions used to collect points informatio
 <div id="container">
 <h1> Chapin Hall Points - Points Summary </h1>
 
-<a href="http://chapin-points.net16.net/admin/AdminPage1.php"> Return to Admin Home Page</a><br />
+<a href="http://chapin-points.byethost5.com/admin/AdminPage1.php"> Return to Admin Home Page</a><br />
 <br />
 <?php
 	

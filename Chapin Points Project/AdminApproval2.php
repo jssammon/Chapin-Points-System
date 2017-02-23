@@ -45,7 +45,7 @@ include_once('../header.php'); // header info (CSS, etc) is consistent. This wil
 	echo $j." records submitted successfully <br />";
 ?>
 
-<a href="http://chapin-points.net16.net/admin/AdminPage1.php"> Return to Admin Home Page </a>
+<a href="http://chapin-points.byethost5.com/admin/AdminPage1.php"> Return to Admin Home Page </a>
 
 
 </div>

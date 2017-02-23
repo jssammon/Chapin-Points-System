@@ -13,7 +13,7 @@ include_once('header.php'); // header info (CSS, etc) is consistent. This will m
 <div id="container">
 <h1> Chapin Hall Points Submission Form </h1>
 <br />
-<a href="http://chapin-points.net16.net/FormP1.php"> Go Back</a><br /><br />
+<a href="http://chapin-points.byethost5.com/FormP1.php"> Go Back</a><br /><br />
 <?php
 	// get the 3 variables requested
 	$name    = sanitize_input($_POST['name']);

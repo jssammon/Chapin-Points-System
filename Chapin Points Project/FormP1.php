@@ -13,7 +13,7 @@ include_once('header.php'); // header info (CSS, etc) is consistent. This will m
 <h1> Chapin Hall Points Submission Form </h1>
 <p> The complete points policy may be found <a href="http://chapinhall.weebly.com/points.html"> here</a><br />
 <a href="http://chapinhall.weebly.com/"> Return to Chapin Hall site</a><br />
-<a href="http://chapin-points.net16.net/"> Return to Point homepage</a><br />
+<a href="http://chapin-points.byethost5.com/"> Return to Point homepage</a><br />
 </p>
 
 <form action="FormP2.php" method="post"> <!-- This is the main form block (Part 1) -->

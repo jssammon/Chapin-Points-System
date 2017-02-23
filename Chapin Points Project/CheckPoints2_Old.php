@@ -80,7 +80,7 @@ include_once('GetPoints.php'); // Functions used to collect points information
 	
 ?>
 <br />
-<a href="http://chapin-points.net16.net/default.php"> Return to points homepage</a><br />
+<a href="http://chapin-points.byethost5.com/default.php"> Return to points homepage</a><br />
 
 </div>
 <?php

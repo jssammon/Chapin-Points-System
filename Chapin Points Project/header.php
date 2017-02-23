@@ -15,7 +15,7 @@ requires mySQL access
 
 <!-- CSS stylesheet, default for now-->
 <!-- <link rel="stylesheet" type="text/css" href="http://www.000webhost.com/images/index/styles.css" /> -->
-<link rel="stylesheet" type="text/css" href="http://chapin-points.net16.net/styles.css" />
+<link rel="stylesheet" type="text/css" href="http://chapin-points.byethost5.com/styles.css" />
 <!-- Additional style (error in form) - may be incorporated in CSS later-->
 
 
@@ -69,10 +69,10 @@ $(function() {
 	// Anyways, call this on any raw inputted data before doing anything with it. It's like a condom for your webform.
 	
 	function connect_to_mySQL() {
-		$server = "mysql11.000webhost.com";
-		$username = "a5454234_admin";
+		$server = "sql201.byethost5.com";
+		$username = "b5_19064075";
 		$password = "chapin726";
-		$dbname = "a5454234_Points";
+		$dbname = "b5_19064075_Points";
 		// connect to mySQL, as per usual
 		$connection = mysql_connect($server,$username,$password);
 		// Check connection

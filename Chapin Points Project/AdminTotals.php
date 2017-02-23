@@ -10,7 +10,7 @@ include_once('../header.php'); // header info (CSS, etc) is consistent. This wil
 <div id="container">
 <h1> Chapin Hall Points - Points Summary </h1>
 
-<a href="http://chapin-points.net16.net/admin/AdminPage1.php"> Return to Admin Home Page </a><br />
+<a href="http://chapin-points.byethost5.com/admin/AdminPage1.php"> Return to Admin Home Page </a><br />
 <?php
 	
 	// Get the current year

@@ -13,15 +13,15 @@ include_once('../header.php'); // header info (CSS, etc) is consistent. This wil
 <br>
 <b><u> Internal Links </b></u>
 <ul>
-<li><a href="http://chapin-points.net16.net/admin/AdminApproval.php"> Approve/Reject points</a></li>
-<li><a href="http://chapin-points.net16.net/admin/AdminTotals.php"> Get point totals and subtotals</a></li>
-<li><a href="http://chapin-points.net16.net/admin/AdminSetDates.php"> Set quarter start/end dates </a></li>
-<li><a href="http://chapin-points.net16.net/CheckPoints.php"> Get point record by NetID (Public Page) </a></li>
-<li><a href="http://chapin-points.net16.net/default.php"> Points homepage (Public Page) </a></li>
+<li><a href="http://chapin-points.byethost5.com/admin/AdminApproval.php"> Approve/Reject points</a></li>
+<li><a href="http://chapin-points.byethost5.com/admin/AdminTotals.php"> Get point totals and subtotals</a></li>
+<li><a href="http://chapin-points.byethost5.com/admin/AdminSetDates.php"> Set quarter start/end dates </a></li>
+<li><a href="http://chapin-points.byethost5.com/CheckPoints.php"> Get point record by NetID (Public Page) </a></li>
+<li><a href="http://chapin-points.byethost5.com/default.php"> Points homepage (Public Page) </a></li>
 </ul>
 <b><u> External Links </b></u>
 <ul>
-<li><a href="http://members.000webhost.com/login.php"> Site Management Login</a></li>
+<li><a href="http://panel.byethost.com/"> Site Management Login</a></li>
 </ul>
 
 </div>
